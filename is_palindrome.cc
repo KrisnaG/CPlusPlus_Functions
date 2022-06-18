@@ -5,12 +5,20 @@
 
 using namespace std;
 
+/**
+ * @brief Determines if a string is a palindrome or not.
+ * Utilises stack and queue from the Standard Template Library
+ * to solve this problem.
+ * 
+ * @param word string to check
+ */
 void is_palindrome(string word) 
 {
     stack<char> stack;
     queue<char> queue;
     bool is_palindrome = true;
 
+    // Push each character to a stack and queue
     for (int i = 0; i != word.length(); i++) {
         if (word[i] != ' ') {
             stack.push(word[i]);
@@ -18,6 +26,8 @@ void is_palindrome(string word)
         }
     }
 
+    // queue pops in order
+    // stack pops in reverse order
     while(!stack.empty()) {
         if(stack.top() != queue.front()) {
             is_palindrome = false;
