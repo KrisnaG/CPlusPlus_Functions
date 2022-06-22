@@ -17,3 +17,5 @@ Some C++ functions
   * sum_n_terms_iteration(number)
   * sum_n_terms_rec(number)
   * sum_n_terms_tail_rec(number, sum)
+* insertion_sort:
+  * insertion_sort(int_array, length) 
